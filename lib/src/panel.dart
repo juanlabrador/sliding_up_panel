@@ -352,33 +352,6 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
                                 : widget.panelBuilder!(_sc),
                           )),
 
-                      // header
-                      widget.header != null
-                          ? Positioned(
-                              top: widget.slideDirection == SlideDirection.UP
-                                  ? 0.0
-                                  : null,
-                              bottom:
-                                  widget.slideDirection == SlideDirection.DOWN
-                                      ? 0.0
-                                      : null,
-                              child: widget.header ?? SizedBox(),
-                            )
-                          : Container(),
-
-                      // footer
-                      widget.footer != null
-                          ? Positioned(
-                              top: widget.slideDirection == SlideDirection.UP
-                                  ? null
-                                  : 0.0,
-                              bottom:
-                                  widget.slideDirection == SlideDirection.DOWN
-                                      ? null
-                                      : 0.0,
-                              child: widget.footer ?? SizedBox())
-                          : Container(),
-
                       // collapsed panel
                       Positioned(
                         top: widget.slideDirection == SlideDirection.UP
@@ -410,6 +383,33 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
                                 ),
                         ),
                       ),
+
+                      // header
+                      widget.header != null
+                          ? Positioned(
+                              top: widget.slideDirection == SlideDirection.UP
+                                  ? 0.0
+                                  : null,
+                              bottom:
+                                  widget.slideDirection == SlideDirection.DOWN
+                                      ? 0.0
+                                      : null,
+                              child: widget.header ?? SizedBox(),
+                            )
+                          : Container(),
+
+                      // footer
+                      widget.footer != null
+                          ? Positioned(
+                              top: widget.slideDirection == SlideDirection.UP
+                                  ? null
+                                  : 0.0,
+                              bottom:
+                                  widget.slideDirection == SlideDirection.DOWN
+                                      ? null
+                                      : 0.0,
+                              child: widget.footer ?? SizedBox())
+                          : Container(),
                     ],
                   ),
                 ),
