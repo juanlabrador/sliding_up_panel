@@ -348,7 +348,9 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
                           child: Container(
                             height: widget.maxHeight,
                             child: widget.panel != null
-                                ? widget.panel
+                                ? IgnorePointer(
+                                    ignoring: !_isPanelOpen,
+                                    child: widget.panel)
                                 : widget.panelBuilder!(_sc),
                           )),
 
